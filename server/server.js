@@ -26,7 +26,7 @@ await connectDb()
 await connectCloudinary()
 
 //Allow multiple origins
-const allowedOrigins = ['http://localhost:5173']
+const allowedOrigins = ['https://grocery-app-greencart-1.onrender.com']
 
 //Middleware configuration
 
