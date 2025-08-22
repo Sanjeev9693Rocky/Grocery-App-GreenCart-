@@ -31,7 +31,7 @@ export const register = async (req, res) => {
         res.cookie('token', token, {
             httpOnly: true, // prevent javascript to access cookie
             secure:  true, //use secure cookies in production
-            samesite: 'none',   //CSRF protection
+            sameSite: 'none',   //CSRF protection
             maxAge: 7 * 24 * 60 * 60 * 1000,   //cookie expiration time 
         })
 
