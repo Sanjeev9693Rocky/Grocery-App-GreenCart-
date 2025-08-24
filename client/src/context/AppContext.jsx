@@ -3,10 +3,15 @@ import { Children, createContext, useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { dummyProducts } from "../assets/assets";
 import toast from "react-hot-toast"
-import axios from "axios"
+import ax from "axios"
 
-axios.defaults.withCredentials = true
-axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
+// axios.defaults.withCredentials = true
+// axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
+
+const axios = ax.create({
+    baseURL: import.meta.env.VITE_BACKEND_URL,
+    withCredentials: true
+})
 
 
 export const AppContext = createContext();
