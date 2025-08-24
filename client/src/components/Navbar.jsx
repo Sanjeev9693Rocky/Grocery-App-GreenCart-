@@ -33,7 +33,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className="flex items-center justify-between px-6 md:px-14 lg:px-18 xl:px-32 py-3 border-b border-gray-300 bg-white  transition-all fixed">
+        <nav className="flex items-center justify-between px-6 md:px-14 lg:px-18 xl:px-32 py-3 border-b border-gray-300 bg-white  transition-all fixed top-0 z-50">
 
             <NavLink to='/' onClick={() => setOpen(false)}>
                 <img to="/" src={assets.logo} alt="logo" width="157" height="40" viewBox="0 0 157 40"  >
