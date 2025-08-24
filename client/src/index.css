@@ -91,6 +91,6 @@ button:focus-visible {
   display: none;
 }
 
-body{
+#root{
   background: #45644c !important;
 }
