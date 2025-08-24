@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { assets } from '../assets/assets'
 import { useAppContext } from '../context/AppContext'
 import toast from 'react-hot-toast'
@@ -67,7 +67,7 @@ const Navbar = () => {
                     <div className='relative group'> 
                         <img src = {assets.profile_icon} className='w-10' alt='' /> 
                         <ul className='hidden group-hover:block absolute top-10 right-0 bg-white shadow border border-gray-200 py-2.5 w-30 rounded-md text-sm z-40'>
-                            <li onClick={() => navigate("my-order")} className='p-1.5 pl-3 hover:bg-primary/10 cursor-pointer'>My Orders</li>
+                            <Link to='/my-orders'  className='p-1.5 pl-3 hover:bg-primary/10 cursor-pointer'>My Orders</Link>
                             <li  onClick={logout} className='p-1.5 pl-3 hover:bg-primary/10 cursor-pointer'>Logout</li>
                         </ul>
                     </div>
@@ -96,9 +96,10 @@ const Navbar = () => {
                 <NavLink to="/" onClick={() => setOpen(false)}>Home</NavLink>
                 <NavLink to="/products" onClick={() => setOpen(false)}>All Product</NavLink>
                 {user &&
-                    <NavLink to="/products" onClick={() => setOpen(false)}>My orders</NavLink>
+                    <NavLink to="/my-orders" onClick={() => setOpen(false)}>My orders</NavLink>
                 }
-                <NavLink to="/contacts" onClick={() => setOpen(false)}>Contacts</NavLink>
+                <a href="#contacts" onClick={() => setOpen(false)}>Contacts</a>
+                <a href='#service' onClick={() => setOpen(false)}>Service</a>
 
                 {!user ? (
                     <button onClick={() => { setOpen(false); setShowUserLogin(true);}} className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm">
