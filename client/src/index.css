@@ -90,3 +90,7 @@ button:focus-visible {
 .no-scrollbar::-webkit-scrollbar{
   display: none;
 }
+
+body{
+  background: #d6ffdf;
+}
