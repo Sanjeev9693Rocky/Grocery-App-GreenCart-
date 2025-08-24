@@ -33,7 +33,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
+        <nav className="flex items-center justify-between px-6 md:px-16 lg:px-20 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
 
             <NavLink to='/' onClick={() => setOpen(false)}>
                 <img to="/" src={assets.logo} alt="logo" width="157" height="40" viewBox="0 0 157 40"  >
@@ -42,7 +42,7 @@ const Navbar = () => {
             </NavLink>
 
             {/* Desktop Menu */}
-            <div className="hidden sm:flex items-center gap-8">
+            <div className="hidden sm:flex items-center gap-7 text-base">
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/products'>All Products</NavLink>
                 <a href='#service'>Service</a>
