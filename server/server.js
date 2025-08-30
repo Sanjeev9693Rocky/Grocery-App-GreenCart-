@@ -26,13 +26,13 @@ await connectDb()
 await connectCloudinary()
 
 //Allow multiple origins
-// const allowedOrigins = ['https://grocery-app-greencart-1.onrender.com']
+const allowedOrigins = ['https://grocery-app-greencart-1.onrender.com', 'http://localhost:5173/']
 
 //Middleware configuration
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({origin: 'https://grocery-app-greencart-1.onrender.com', credentials: true}))
+app.use(cors({origin: allowedOrigins, credentials: true}))
 
 
 
