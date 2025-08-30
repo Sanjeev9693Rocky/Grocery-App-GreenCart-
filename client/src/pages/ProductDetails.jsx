@@ -92,7 +92,7 @@ const ProductDetails = () => {
                     <div className="w-20 h-0.5 bg-primary rounded-full mt-2"></div>
                 </div>
                 <div>
-                    <div className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-6 lg:grid-cols-5 mt-6 w-full">
+                    <div className="flex justify-center items-start flex-wrap gap-2 md:gap-4 mt-6 mx[-50px] lg:mx-[-80px]">
                         {relatedProducts.filter((product) => product.inStock).map
                         ((product, index) => (
                             <ProductCard key={index} product={product} />
